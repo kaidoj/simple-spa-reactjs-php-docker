@@ -1,0 +1,13 @@
+<div 
+  id="items-container"
+  directive-when-scrolled="$ctrl.loadItems()"
+>
+  <ul
+    id="items"
+  >
+    <li class="item" ng-repeat="item in $ctrl.getItems()">
+      {{ item.title }}
+      <span>{{ item.tags.join(',') }}</span>
+    </li>
+  </ul>
+</div>

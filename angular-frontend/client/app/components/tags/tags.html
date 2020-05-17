@@ -1,0 +1,13 @@
+<ul id="tags">
+  <li ng-repeat="tag in $ctrl.tags">
+    <input
+      ng-model="$ctrl.service.selectedTag"
+      id="{{ tag }}"
+      type="radio"
+      name="tag"
+      ng-checked="($ctrl.service.state.selectedTag === tag)"
+      value="{{ tag }}"
+      ng-change="$ctrl.changeTag(tag)"
+    /><label for="{{ tag }}">{{ tag }}</label>
+  </li>
+</ul>

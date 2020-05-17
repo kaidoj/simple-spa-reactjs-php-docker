@@ -1,0 +1,12 @@
+<div class="search-input">
+  <img
+    src="../../../assets/img/search-solid.svg"
+    class="search-icon"
+    alt="logo"
+  /><input 
+    type="text" 
+    placeholder="Search all"
+    ng-model="keyword"
+    ng-keyup="$ctrl.getService().changeKeyword(keyword)"
+  />
+</div>

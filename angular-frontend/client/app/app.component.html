@@ -1,0 +1,11 @@
+<div class="container">
+  <app-header></app-header>
+  <div id="main">
+      <aside id="leftbar" class="{{ $ctrl.isOpen() ? 'is-open' : '' }}">
+        <leftbar></leftbar>
+      </aside>
+      <section id="rightbar">
+        <rightbar></rightbar>
+      </section>
+  </div>
+</div>

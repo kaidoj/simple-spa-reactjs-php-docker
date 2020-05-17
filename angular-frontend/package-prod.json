@@ -1,0 +1,19 @@
+{
+  "name": "angular-frontend-prod",
+  "version": "0.0.1",
+  "description": "Production file",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  },
+  "scripts": {
+    "start": "http-server ./dist"
+  },
+  "keywords": [
+    "angular",
+    "webpack",
+    "es6"
+  ],
+  "author": "Kaidoj",
+  "license": "MIT"
+}
