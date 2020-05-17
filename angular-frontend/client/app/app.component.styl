@@ -1,0 +1,182 @@
+/* placed all in one style file. Usally each component should have it's own style file.*/
+@import url('https://fonts.googleapis.com/css?family=Cairo:400,700')
+
+primary-color = #3ea5e6
+border-color = #e8e8e8
+
+leftbar
+  flex 1
+
+html, body
+  font-family Cairo,serif  
+  padding 0 
+  margin 0
+  font-size 1.1rem
+
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+box-shadow-m(top, left, blur, spread, color)
+  -webkit-box-shadow top left blur spread color
+  -moz-box-shadow top left blur spread color
+  box-shadow top left blur spread color
+
+input[type=text]
+  height 40px
+  border-radius(30px)
+  box-shadow-m(0px, 3px, 5px, -4px, rgba(0,0,0,0.75))
+  font-size 1rem
+  padding 0 10px 0 35px
+  outline none
+  border 1px solid #f3f3f3
+
+a
+  color primary-color
+  text-decoration none
+  &:hover
+    text-decoration underline
+
+.container 
+  display flex
+  padding 10px
+  flex-flow column
+
+header
+  display flex
+  height 10vh
+  align-items center
+  box-shadow-m(0px, 3px, 5px, -4px, rgba(0,0,0,0.75))
+  margin-bottom 25px
+  padding 15px
+  h1
+    margin 0
+    color primary-color
+    font-size 2.2rem
+  .filter-btn 
+    display none
+  
+#main
+  display flex
+  position relative
+  min-height 100%
+  height 100%
+  #leftbar
+    flex: 1;
+    border-right 1px solid border-color
+    overflow-y scroll
+    padding 10px
+    height 100vh
+    #tags
+      list-style none
+      padding 0
+      margin 0
+      margin-top 30px
+    .search-input 
+      position relative
+      .search-icon
+        width 20px
+        height 20px
+        position absolute
+        top 10px
+        left 10px
+      input[type=text]
+        width 100%
+        max-width 150
+        box-sizing border-box
+  #rightbar
+    flex 4
+    padding 0 10px 10px 10px
+    height 100%
+    min-height 100%
+    #items-container
+      overflow-y scroll
+      height 100vh
+      #items
+        display flex
+        flex-wrap wrap
+        list-style none
+        justify-content space-between
+        margin 0
+        padding 0
+        .item
+          flex-basis 29.33%
+          min-height 100px
+          box-shadow-m(0px, 3px, 5px, -4px, rgba(0,0,0,0.75))
+          padding 10px
+          font-size 1.4rem
+          word-wrap  break-word
+          font-weight 700
+          border-left: 3px solid primary-color
+          margin-bottom 25px
+          line-height 1.6rem
+          span 
+            display block
+            font-size 1rem
+            font-weight normal
+        &:last-child::after
+          content ''
+          width 32%
+    #toolbar
+      padding 10px
+      border-bottom 1px solid border-color
+      margin-bottom 10px
+      a
+        padding: 0 10px
+        &.active
+          color: #333333
+
+@media (max-width: 768px)
+  #main
+    #rightbar
+      #items
+        .item
+          flex-basis 44%
+@media (max-width: 420px)
+  header 
+    .filter-btn
+      display inline-block
+      margin-left auto
+      margin-top 10px
+      img 
+        height 35px
+        width 35px
+  #main #leftbar
+    position absolute
+    top -20px
+    visibility hidden
+    width 0
+    height 0
+    flex none
+    padding 0
+    transition all .3s ease-in
+    left -100vw
+    .search-input
+      input[type=text]
+        max-width 85%
+        width 100%
+        height 50px
+      .search-icon
+        top 15px
+    &.is-open
+      visibility visible
+      background #ffffff
+      box-shadow-m(0px, 3px, 5px, -4px, rgba(0,0,0,0.75))
+      width 90vw
+      height auto
+      border-top 3px solid primary-color
+      padding 25px 10px
+      transition all .3s ease-out
+      left 0
+      &:target
+        left 0
+  #main
+    #rightbar
+      #items
+        .item
+          flex-basis 43%
+@media (max-width: 375px)
+  #main
+    #rightbar #items .item
+      flex-basis 100%

@@ -1,0 +1,11 @@
+<nav id="toolbar">
+  Order by:
+  <a href="#" 
+    aria-label="{{ item.label }}" 
+    ng-repeat="item in $ctrl.sortable"
+    ng-click="$ctrl.getService().changeSort(item.key)"
+    class="{{ item.key === $ctrl.getSort() ? 'active' : '' }}"
+  >
+    {{ item.value }}
+  </a>
+</nav>

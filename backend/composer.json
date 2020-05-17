@@ -1,0 +1,22 @@
+{
+    "name": "kaidoj/backend",
+    "description": "Backend",
+    "authors": [
+        {
+            "name": "Kaidoj",
+            "email": "jast112@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kaidoj\\SDKS\\": "./src"
+        },
+        "classmap": [
+            "./tests"   
+        ]
+    },
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}

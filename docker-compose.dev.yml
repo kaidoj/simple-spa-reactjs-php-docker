@@ -1,0 +1,14 @@
+version: '3.3'
+services: 
+  backend:
+    hostname: backend
+    container_name: backend
+    build: ./backend
+    ports:
+      - 3000:80
+    restart: unless-stopped
+    volumes:
+      - ./backend/data:/var/www/data
+      - ./backend/public:/var/www/html
+      - ./backend/src:/var/www/src
+      - ./backend/vendor:/var/www/vendor

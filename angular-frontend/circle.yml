@@ -1,0 +1,19 @@
+machine:
+  node:
+    version: 6.5
+
+dependencies:
+  cache_directories:
+    - node_modules
+  override:
+    - npm prune && npm install
+
+test:
+  override:
+    - echo 'test needed'
+
+deployment:
+  staging:
+    branch: [develop, master]
+    commands:
+      - npm run deploy

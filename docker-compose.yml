@@ -1,0 +1,21 @@
+version: '3.3'
+services: 
+  backend:
+    hostname: backend
+    container_name: backend
+    build: ./backend
+    ports:
+      - 3000:80
+    restart: unless-stopped
+  frontend:
+    hostname: frontend
+    container_name: frontend
+    build: ./frontend
+    ports:
+      - 3001:3001
+  angular-frontend:
+    hostname: angular-frontend
+    container_name:  angular-frontend
+    build: ./angular-frontend
+    ports:
+      - 3002:8080
