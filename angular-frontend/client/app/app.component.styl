@@ -128,11 +128,8 @@ header
           color: #333333
 
 @media (max-width: 768px)
-  #main
-    #rightbar
-      #items
-        .item
-          flex-basis 44%
+  #main #rightbar #items-container #items .item
+    flex-basis 44%
 @media (max-width: 420px)
   header 
     .filter-btn
@@ -171,12 +168,10 @@ header
       left 0
       &:target
         left 0
-  #main
-    #rightbar
-      #items
-        .item
-          flex-basis 43%
+  #main #rightbar #toolbar a 
+    padding 0 5px
+  #main #rightbar #items-container #items .item
+    flex-basis 43%
 @media (max-width: 375px)
-  #main
-    #rightbar #items .item
-      flex-basis 100%
+  #main #rightbar #items-container #items .item
+    flex-basis 100%
