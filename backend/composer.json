@@ -15,7 +15,9 @@
             "./tests"   
         ]
     },
-    "require": {},
+    "require": {
+      "ext-json": "*"
+    },
     "require-dev": {
         "phpunit/phpunit": "^9"
     }
