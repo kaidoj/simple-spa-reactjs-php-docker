@@ -1,6 +1,7 @@
 <?php
 namespace Kaidoj\SDKS;
 
+use Exception;
 use Kaidoj\SDKS\Response\JSON;
 use Kaidoj\SDKS\Response\ResponseInterface;
 
@@ -33,12 +34,14 @@ class Application
     $this->data = $data;
   }
 
-  /**
-   * Start application
-   *
-   * @param $requestURI
-   * @return ResponseInterface
-   */
+    /**
+     * Start application
+     *
+     * @param string $requestURI
+     * @param Data $data
+     * @return ResponseInterface
+     * @throws Exception
+     */
   public static function run(string $requestURI, Data $data): ResponseInterface
   { 
     $application = new Application(
@@ -48,12 +51,13 @@ class Application
     return $application->listen($requestURI);
   }
 
-  /**
-   * Listens for server request uri and returns output based on them
-   *
-   * @param $requestURI
-   * @return ResponseInterface
-   */
+    /**
+     * Listens for server request uri and returns output based on them
+     *
+     * @param $requestURI
+     * @return ResponseInterface
+     * @throws Exception
+     */
   public function listen(string $requestURI): ResponseInterface
   {
     $url = parse_url($requestURI);
