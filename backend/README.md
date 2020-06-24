@@ -13,7 +13,7 @@ GET /items?tag=test&search=test&sort=title&page=1
 | `page`    | `int` | default: 1. Returns {limit} number of items per page. |
 | `limit`    | `int` | default: 12. How many results per page should be returned. |
 
-Returns items basted on given filters in alphabetical order
+Returns items based on given filters in alphabetical order
 
 
 ```http
