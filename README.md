@@ -1,10 +1,5 @@
 # ReactJS, Angular, Docker, PHP application
 
-Demos located at: 
-
-[ReactJS](http://ec2-18-156-205-114.eu-central-1.compute.amazonaws.com:3001/)  
-[Angular 1.6](http://ec2-18-156-205-114.eu-central-1.compute.amazonaws.com:3002/)
-
 ### Screenshots
 
 <table width=100%>
